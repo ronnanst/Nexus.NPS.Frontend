@@ -9,8 +9,10 @@ import { Box, Collapse, IconButton, List, ListItemButton, ListItemIcon, ListItem
 import { ChevronLeft } from '@mui/icons-material'
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined'
 import { useRouter } from 'next/navigation'
+import { useUser } from '@/common/context/UserContext';
 
 export const SideBar = () => {
+    const { userId } = useUser()
     const router = useRouter()
     const [open, setOpen] = useState<boolean>(false)
 
@@ -36,19 +38,22 @@ export const SideBar = () => {
                 </IconButton>
             </Box>
             <List>
-                <ListItemButton onClick={() => router.push('/review')}>
+                <ListItemButton onClick={() => router.push('/review')} disabled={!userId}>
                     <ListItemIcon><RateReviewOutlinedIcon/></ListItemIcon>
                     <Collapse in={open} orientation='horizontal'>
                         <ListItemText primary='Review'/>
                     </Collapse>
                 </ListItemButton>
-                <ListItemButton onClick={() => router.push('/dashboard')}>
+                <ListItemButton onClick={() => router.push('/dashboard')} disabled={!userId}>
                     <ListItemIcon><AnalyticsOutlinedIcon/></ListItemIcon>
                     <Collapse in={open} orientation='horizontal'>
                         <ListItemText primary='Dashboard'/>
                     </Collapse>
                 </ListItemButton>
             </List>
+            <Box sx={{ marginTop: 'auto' }}>
+                HI
+            </Box>
         </Drawer>
     )
 }
