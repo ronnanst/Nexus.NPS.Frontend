@@ -13,9 +13,8 @@
 <p align="center">
  <a href="#about">About</a> •
  <a href="#how-to-run">How to Run</a> •
- <a href="#user-management-permissions">User Management Permissions</a> •
- <a href="#how-to-merge">How to Merge</a> •
- <a href="#how-to-deploy">How to Deploy</a>
+ <a href="#pre-requisites">Pre-requisites</a> •
+ <a href="#instalation">Instalation</a> •
 </p>
 
 ## About
@@ -47,6 +46,14 @@ $ Nexus.NPS.Frontend
 
 # Run the command in the terminal
 $ npm run dev
+
+# USERS LOGIN (login / password)
+user1 / user1
+user2 / user2
+user3 / user3
+user4 / user4
+user5 / user5
+user6 / user6
 
 # Access the link by entering the port entered at the time of compilation. Currently the default port is set to 3000
 $ http://localhost:[port]/
