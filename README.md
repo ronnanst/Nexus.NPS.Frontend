@@ -54,7 +54,6 @@ user3 / user3
 user4 / user4
 user5 / user5
 user6 / user6
-user7 / user7
 
 # Access the link by entering the port entered at the time of compilation. Currently the default port is set to 3000
 $ http://localhost:[port]/
