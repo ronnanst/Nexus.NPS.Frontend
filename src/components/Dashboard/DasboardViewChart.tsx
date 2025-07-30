@@ -120,7 +120,7 @@ export const DashboardViewChart = ({ ratings }: { ratings: any }) => {
             title: {
             text: 'Average NPS',
             },
-            min: 0,
+            min: -100,
             max: 100,
         },
         ],

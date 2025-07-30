@@ -20,7 +20,7 @@ export default function DashboardView() {
             sx={{
                 padding: '1rem',
                 height: '100vh',
-                width: 'auto',
+                width: '100%',
                 background: '#F8F8F8'
             }}
         >

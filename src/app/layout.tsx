@@ -13,9 +13,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <UserProvider>
-          <Box sx={{ display: 'flex'}}>
+          <Box sx={{ display: 'flex', height: '100vh', width: '100vw'}}>
             <SideBar/>
-            <Box sx={{ flexGrow: '1' }}>
+            <Box sx={{ width: '100%' }}>
               {children}
             </Box>
           </Box>
