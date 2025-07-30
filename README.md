@@ -13,9 +13,8 @@
 <p align="center">
  <a href="#about">About</a> •
  <a href="#how-to-run">How to Run</a> •
- <a href="#user-management-permissions">User Management Permissions</a> •
- <a href="#how-to-merge">How to Merge</a> •
- <a href="#how-to-deploy">How to Deploy</a>
+ <a href="#pre-requisites">Pre-requisites</a> •
+ <a href="#instalation">Instalation</a> •
 </p>
 
 ## About
