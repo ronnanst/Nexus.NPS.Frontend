@@ -47,6 +47,15 @@ $ Nexus.NPS.Frontend
 # Run the command in the terminal
 $ npm run dev
 
+# USERS LOGIN (login / password)
+user1 / user1
+user2 / user2
+user3 / user3
+user4 / user4
+user5 / user5
+user6 / user6
+user7 / user7
+
 # Access the link by entering the port entered at the time of compilation. Currently the default port is set to 3000
 $ http://localhost:[port]/
 ```
