@@ -21,7 +21,7 @@ export const DashboardViewPage = () => {
     const [ratings, setRatings] = useState<any>()
 
     return (
-        <Box sx={{ height: '100%', overflow: 'auto', paddingTop: '5px', display: 'flex', flexDirection: 'column' }}>
+        <Box sx={{ height: '100%', overflowX: 'hidden !important', paddingTop: '5px', display: 'flex', flexDirection: 'column' }}>
             <div>
                 <Typography variant="h5" sx={{ color: '#083D5B', marginBottom: '1rem', fontWeight: 'bold', flex: '0 0 40px' }}>
                     NPS Dashboard
@@ -42,7 +42,7 @@ export const DashboardViewPage = () => {
                 </Box>
             </Box>
 
-            <Box sx={styles.divWrapper} overflow='hidden' flex='2'>
+            <Box sx={styles.divWrapper} flex='2'>
                 <DashboardViewChart ratings={ratings}/>
             </Box>
         </Box>

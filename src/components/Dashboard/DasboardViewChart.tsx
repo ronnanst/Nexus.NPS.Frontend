@@ -59,38 +59,34 @@ export const DashboardViewChart = ({ ratings }: { ratings: any }) => {
         type: 'bar',
         group: 'nps',
         data: detractors,
-        // data: [30, 20, 25, 15, 10],
     },
     {
         name: 'Passives',
         type: 'bar',
         group: 'nps',
         data: passives,
-        // data: [20, 25, 30, 20, 15],
     },
     {
         name: 'Promoters',
         type: 'bar',
         group: 'nps',
         data: promoters,
-        // data: [50, 55, 45, 65, 75],
     },
     {
-        name: 'Avg NPS',
+        name: 'Avg_NPS',
         type: 'line',
         data: averageNPS,
-        // data: [3.8, 4.1, 3.9, 4.3, 4.5],
     },
     ];
 
     const options: ApexOptions = {
         chart: {
-            type: 'bar',
+            type: 'line',
             stacked: true,
             toolbar: { show: false },
         },
         stroke: {
-            width: [0, 0, 0, 3], // only the line is stroked
+            width: [0, 0, 0, 3],
             curve: 'smooth'
         },
         plotOptions: {
@@ -100,7 +96,7 @@ export const DashboardViewChart = ({ ratings }: { ratings: any }) => {
                 columnWidth: '40%',
             },
         },
-        colors: ['#F44336', '#FFEB3B', '#4CAF50', '#1976D2'], // red, yellow, green, blue
+        colors: ['#F44336', '#FFEB3B', '#4CAF50', '#1976D2'],
         dataLabels: {
             enabled: false,
         },
@@ -109,16 +105,18 @@ export const DashboardViewChart = ({ ratings }: { ratings: any }) => {
         },
         yaxis: [
         {
+            seriesName: ['Detractors', 'Passives', 'Promoters'],
             title: {
-            text: 'Products NPS (%)',
+               text: 'Products NPS (%)',
             },
             min: 0,
             max: 100,
         },
         {
+            seriesName: ['Avg_NPS'],
             opposite: true,
             title: {
-            text: 'Average NPS',
+                text: 'Average NPS',
             },
             min: -100,
             max: 100,
