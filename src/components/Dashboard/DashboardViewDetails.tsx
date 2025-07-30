@@ -17,11 +17,11 @@ export const DashboardViewDetails = ({ ratings }: { ratings: any}) => {
             var total = ratings.length
 
             const goodAverage = (goodNPS / total * 100).toFixed(2)
-            setPromoters(parseInt(goodAverage))
+            setPromoters(parseFloat(goodAverage))
             const neutralAverage = (neutralNPS / total * 100).toFixed(2)
-            setPassives(parseInt(neutralAverage))
+            setPassives(parseFloat(neutralAverage))
             const badAverage = (badNPS / total * 100).toFixed(2)
-            setDetractors(parseInt(badAverage))
+            setDetractors(parseFloat(badAverage))
         } else {
             setPromoters(0)
             setPassives(0)

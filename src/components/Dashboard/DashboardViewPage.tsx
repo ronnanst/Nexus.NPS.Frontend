@@ -3,6 +3,7 @@ import { DashboardViewFilter } from "./DashboardViewFilter"
 import { useState } from "react"
 import { DashboardViewOverall } from "./DashboardViewOverall"
 import { DashboardViewDetails } from "./DashboardViewDetails"
+import { DashboardViewChart } from "./DasboardViewChart"
 
 const styles = {
     divWrapper: {
@@ -42,7 +43,7 @@ export const DashboardViewPage = () => {
             </Box>
 
             <Box sx={styles.divWrapper} overflow='hidden' flex='2'>
-                {/* <ReviewViewComments ref={commentRef}/> */}
+                <DashboardViewChart ratings={ratings}/>
             </Box>
         </Box>
     )

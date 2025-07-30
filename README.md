@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# A Nextjs 15 Project
 
-## Getting Started
+This is a Nextjs 15 project with the React ApexCharts library for the dashboard visualization tool
 
-First, run the development server:
+## Pre-requirements
+
+Before starting, be sure to have installed:
+
+- Node.js: [https://nodejs.org/](https://nodejs.org/)
+
+## Installation
+
+1. Clone the repository: `git clone https://github.com/seu-usuario/seu-projeto.git`
+2. Browser through the project's directory: `cd your-project`
+3. Install all dependencies:: `npm install`
+
+## Starting the Project
+
+To run the project, write the following command:
+
+`npm run dev`
+
+Open your browser and access http://localhost:3000/.
+
+## Libraries
+
+**- ApexCharts**
+
+Interactive charts to create dashboard visualizations. See the documentation here: [https://apexcharts.com/docs/react-charts/] to obtain more information about this package.
+
+## Estrutura do Projeto
+
+rganização por module.
+
+- **Admin**: Para o módulo principal do projeto: Dashboard com a *Árvore de Decomposição*
+- **Core**: Para módulos únicos e os services.
+- **Features**: Para novas funcionalidades.
+- **Shared**: Fica os componentes que aparecem em mais de um arquivo(componentes, diretivas e pipes). 
+
+
+
+
+<h1 align="center">
+   <a href="#"> Nexus NPS Project </a>
+</h1>
+
+<h3 align="center">
+  This applications is responsible to register and monitor Net Promoter Scores (NPS) for the Company.
+</h3>
+
+<h4 align="center">
+    Status: in development
+</h4>
+
+<p align="center">
+ <a href="#about">About</a> •
+ <a href="#how-to-run">How to Run</a> •
+ <a href="#user-management-permissions">User Management Permissions</a> •
+ <a href="#how-to-merge">How to Merge</a> •
+ <a href="#how-to-deploy">How to Deploy</a>
+</p>
+
+## About
+
+Net Promoter Score (NPS) is a customer metric that measures how likely a person is to recommend a product, service or brand. Widely used to assess customer satisfaction and loyalty.
+
+This project aims to facilitate users' visualization of many different products's performance by having quick access of the desired products' NPS value.
+
+## How to run
+
+### Pre-requisites
+
+Before you begin, you will need to have the following tools installed on your machine:
+
+[Node.js v14.21.3 or newer](https://nodejs.org/en/download/prebuilt-installer/current) and a Package Manager (npm or yarn).
+
+[Visual Studio Code](https://code.visualstudio.com/) (Windows/Linux/MacOs).
+
+### Instalation
+
+1. Clone the repository: `git clone <url>`
+3. Install all dependencies: `npm install` in case it fails, add the legacy flag: `npm install --legacy-peer-deps`
+
+### Run Nexus NPS in VsCode or Terminal
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Access the project folder cmd/terminal or vscode
+$ Nexus.NPS.Frontend
+
+# Run the command in the terminal
+$ npm run dev
+
+# Access the link by entering the port entered at the time of compilation. Currently the default port is set to 3000
+$ http://localhost:[port]/
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

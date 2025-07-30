@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic'
 import { Typography } from '@mui/material'
 import { ApexOptions } from 'apexcharts'
 import React, { useEffect, useState } from 'react'
+import { calculateAverageNps } from '@/common/utils/calculateAverageNps'
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
 
 export const DashboardViewOverall = ({ ratings }: { ratings: any}) => {
@@ -14,24 +15,12 @@ export const DashboardViewOverall = ({ ratings }: { ratings: any}) => {
 
     useEffect(() => {
         if(ratings && ratings.length > 0) {
-            var goodNPS = ratings.filter((x: { score: number }) => x.score === 4 || x.score === 5).length
-            var badNPS = ratings.filter((x: { score: number }) => x.score >= 0 && x.score <= 2).length
-            var total = ratings.filter((x: { score: number }) => x.score !== 3).length
-            // var total = ratings.length // if score == 3 also counts on total %
-
-            const goodAverage = (goodNPS / total * 100)
-            const badAverage = (badNPS / total * 100)
-
-            const average = (goodAverage - badAverage).toFixed(1)
-            setAverageNPS(parseInt(average))
+            var average = calculateAverageNps(ratings)
+            setAverageNPS(average)
         } else {
             setAverageNPS(0)
         }
     }, [ratings])
-
-    const calculateAverage = () => {
-
-    }
 
     const options: ApexOptions = {
         chart: {

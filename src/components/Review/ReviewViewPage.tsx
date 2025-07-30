@@ -54,6 +54,7 @@ export const ReviewViewPage = () => {
 			})
             setProduct({ productName: '' })
             setScore(null)
+            commentRef.current = null
 		} else {
 			setAlertData({
 				isOpen: true,
